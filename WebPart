@@ -1,0 +1,37 @@
+// Online Web-Browser Part
+
+package application;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import javafx.stage.Stage;
+
+public class WebClass implements Initializable {
+
+	
+	@FXML
+	private WebView webView;
+	@FXML
+	private WebEngine webEngine;
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		webEngine = webView.getEngine();
+	}
+	@FXML
+	private void btn(ActionEvent event)
+	{
+		webEngine.load("https://soundcloud.com");
+	}
+}
+		
