@@ -1,0 +1,78 @@
+// Video Window UI
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="650.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VideoController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="410.0" prefHeight="100.0" prefWidth="650.0" style="-fx-background-color: #303030;" styleClass="jfx-slider" stylesheets="@application.css">
+         <children>
+            <Button fx:id="open_btn" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#openButton" styleClass="dark-blue" text="Open File">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font></Button>
+            <Button fx:id="play_btn" layoutX="107.0" layoutY="50.0" mnemonicParsing="false" onAction="#play" styleClass="dark-blue">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="glass-grey">
+                     <image>
+                        <Image url="@../Images/playbtnicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="pause_btn" layoutX="174.0" layoutY="50.0" mnemonicParsing="false" onAction="#pause" styleClass="dark-blue">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/pausebtnicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="307.0" layoutY="50.0" mnemonicParsing="false" onAction="#fast" styleClass="dark-blue">
+               <graphic>
+                  <ImageView fx:id="fastforward_btn" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/fastforwardicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="backSpped_btn" layoutX="374.0" layoutY="50.0" mnemonicParsing="false" onAction="#slow" styleClass="dark-blue">
+               <graphic>
+                  <ImageView fx:id="backspeed_btn" fitHeight="100.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/arrow_left-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="242.0" layoutY="50.0" mnemonicParsing="false" onAction="#stop" styleClass="dark-blue">
+               <graphic>
+                  <ImageView fx:id="stop_btn" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/stop-button-22-672500.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Slider fx:id="volumeSlider" layoutX="511.0" layoutY="53.0" prefHeight="34.0" prefWidth="126.0" styleClass="dark-blue" />
+            <Button fx:id="reload_btn" layoutX="440.0" layoutY="50.0" mnemonicParsing="false" onAction="#reload" styleClass="dark-blue">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/677525-200.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Slider fx:id="timeSlider" blockIncrement="1.0" layoutX="125.0" layoutY="5.0" prefHeight="34.0" prefWidth="396.0" styleClass="dark-blue" />
+            <Button fx:id="closeButton" layoutX="25.0" layoutY="55.0" mnemonicParsing="false" onAction="#Close" styleClass="dark-blue" text="Close" />
+            <Button layoutX="538.0" layoutY="5.0" mnemonicParsing="false" onAction="#FullScreen" styleClass="dark-blue" text="FullScreen" />
+         </children>
+      </AnchorPane>
+      <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="650.0" />
+   </children>
+</AnchorPane>
